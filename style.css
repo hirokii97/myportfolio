@@ -1,0 +1,173 @@
+
+li {
+  list-style: none;
+}
+header nav,
+.footer {
+  background-color: rgb(228,255,211);
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.contact-btn img {
+  width: 100px;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 10;
+}
+
+.contact-btn img:hover{
+  opacity: 0.7;
+}
+
+
+.card-img  {
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+
+.title-text{
+  display: inline-block;
+  border-bottom: 10px dotted #E4FFD3;
+  font-size: 28px;
+  padding-bottom: 20px;
+}
+
+.top {
+  background-image: url(/img/top.jpg);
+  background-position: center;
+  padding: 100px 0;
+}
+
+.top-text h2{
+  text-shadow:3px 3px 0 #FFF, -3px -3px 0 #FFF,
+              -3px 3px 0 #FFF, 3px -3px 0 #FFF,
+              0px 3px 0 #FFF,  0-3px 0 #FFF,
+              -3px 0 0 #FFF, 3px 0 0 #FFF;
+}
+
+.top-wrapper {
+  background: rgba(255,255,255,0.8);
+  /* height: 100%; */
+}
+
+
+.contact-group li {
+  width: 50%;
+  margin: auto;
+  padding: 5px;
+}
+
+section{
+  margin-top: 100px;
+}
+
+/* ========================
+about
+======================== */
+
+.about img {
+  width: 100%;
+  border-radius: 50px;
+}
+
+.about-item-name{
+  font-weight: 700;
+}
+
+
+.about-item-sentence{
+margin-top: 20px;
+line-height: 1.5;
+font-size: 20px;
+}
+
+/* ========================
+skill
+======================== */
+
+.skill-container{
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 20px;
+}
+
+.skill-boxes{
+margin: 0 auto;
+max-width: 600px;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+.skill-card{
+  width: 50%;
+  padding: 10px;
+}
+
+.skill-icon{
+font-size: 250px;
+}
+
+.skill-icon img{
+  width: 250px;
+  height: 250px;
+}
+
+/* ========================
+work
+======================== */
+
+.work-wrapper{
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.work-card-img{
+  width: 250px;
+  height: 250px;
+}
+
+@media screen and (max-width: 768px) {
+	/* 575px以下に適用されるCSS */
+  .about-item-contents{
+  margin-top: 32px;
+  }
+
+  .about-item-sentence{
+    margin-top: 32px;
+  }
+
+  .skill-icon{
+    font-size: 30vw;
+    text-align: center;
+    }
+
+  .skill-icon img{
+    width: 30vw;
+    height: 30vw;
+  }
+
+
+  .contact-group li {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+
+  .contact-group li a {
+    display: block;
+  }
+}
+
