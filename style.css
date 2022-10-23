@@ -1,14 +1,14 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Lato:ital,wght@1,300;1,400;1,700&family=Noto+Sans+JP:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Kiwi+Maru:wght@400;500&family=Lato:ital,wght@1,300;1,400;1,700&family=Noto+Sans+JP:wght@400;500;700&display=swap");
 body {
-  font-family: "Caveat", "Noto Sans Japanese", YuGothic, "游ゴシック", sans-serif;
+  font-family: "Caveat", "Kiwi Maru", YuGothic, "游ゴシック", sans-serif;
   overflow-x: hidden;
   color: #3E3E3E;
   transition: all 0.3s ease 0s;
 }
 
 .ja-font {
-  font-family: "Noto Sans Japanese", YuGothic, "游ゴシック", sans-serif;
+  font-family: "Kiwi Maru", YuGothic, "游ゴシック", sans-serif;
 }
 
 /* ========================
@@ -33,14 +33,47 @@ a:hover {
   background-color: red;
 }
 
-section {
-  padding-top: 100px;
-}
-
 .inner {
   max-width: 1140px;
   margin: 0 auto;
   padding: 0px 20px;
+}
+@media screen and (max-width: 1103px) {
+  .inner {
+    padding: 0px 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .inner {
+    padding: 0px 20px;
+  }
+}
+
+section {
+  padding-top: 100px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.title-text {
+  display: inline-block;
+  font-size: 32px;
+  position: relative;
+  font-weight: 700;
+}
+.title-text::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 1px;
+  background-color: rgb(6, 123, 201);
 }
 
 /* ========================
@@ -222,6 +255,11 @@ top
   font-weight: 700;
   display: inline-block;
 }
+@media screen and (max-width: 768px) {
+  .top-title {
+    font-size: 50px;
+  }
+}
 
 .top-toWorks-btn {
   border: #3E3E3E 1px solid;
@@ -261,18 +299,6 @@ top
   text-align: center;
 }
 
-.title {
-  text-align: center;
-  margin-bottom: 32px;
-}
-
-.title-text {
-  display: inline-block;
-  font-size: 28px;
-  border-bottom: 10px dotted #E4FFD3;
-  padding-bottom: 20px;
-}
-
 .contact-group li {
   width: 50%;
   margin: auto;
@@ -289,12 +315,18 @@ about
 
 .about-item-name {
   font-weight: 700;
+  font-size: 32px;
 }
 
 .about-item-sentence {
   margin-top: 20px;
   line-height: 1.5;
   font-size: 20px;
+}
+@media screen and (max-width: 1103px) {
+  .about-item-sentence {
+    font-size: 18px;
+  }
 }
 
 .about-wrapper {
@@ -339,24 +371,53 @@ skill
 
 .skill-boxes {
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 1000px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .skill-boxes {
+    display: block;
+  }
 }
 
 .skill-card {
-  width: 50%;
+  flex: 1;
+  max-width: 300px;
   padding: 10px;
+}
+@media screen and (max-width: 768px) {
+  .skill-card {
+    max-width: 320px;
+    margin: 60px auto 0px auto;
+  }
 }
 
 .skill-icon {
-  font-size: 250px;
+  font-size: 120px;
+  height: 120px;
+  text-align: center;
 }
 
 .skill-icon img {
-  width: 250px;
-  height: 250px;
+  width: 120px;
+  height: 120px;
+}
+
+.skill-sentence-title {
+  margin-top: 32px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.skill-sentence {
+  margin-top: 20px;
+  line-height: 1.5;
+}
+@media screen and (max-width: 768px) {
+  .skill-sentence {
+    margin-top: 16px;
+  }
 }
 
 /* ========================
@@ -366,6 +427,7 @@ work
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+  height: auto;
 }
 
 .work-card-img {
@@ -378,6 +440,32 @@ work
   /* height: 250px; */
 }
 
+.work-card-sentence {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.work-table {
+  border-bottom: 1px solid rgb(6, 123, 201);
+  width: 100%;
+}
+.work-table td, .work-table th {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid rgb(6, 123, 201);
+}
+.work-table th {
+  min-width: 110px;
+}
+.work-table td {
+  text-align: left;
+}
+
+.work-table-word {
+  word-break: break-all;
+  line-height: 1.5;
+}
+
 @media screen and (max-width: 768px) {
   /* 575px以下に適用されるCSS */
   .about-item-contents {
@@ -385,14 +473,6 @@ work
   }
   .about-item-sentence {
     margin-top: 32px;
-  }
-  .skill-icon {
-    font-size: 30vw;
-    text-align: center;
-  }
-  .skill-icon img {
-    width: 30vw;
-    height: 30vw;
   }
   .contact-group li {
     width: 100%;
@@ -402,6 +482,57 @@ work
     display: block;
   }
 }
+.table-attention {
+  color: red;
+  margin-top: 32px;
+}
+
+/* ========================
+swiper
+======================== */
+.swiper-pagination {
+  margin-top: 60px;
+}
+
+.swiper {
+  padding-bottom: 60px;
+}
+
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  margin: 0 0 0 20px !important;
+  opacity: 1;
+  background: rgb(6, 123, 201);
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #FFF;
+  border: solid 3px rgb(6, 123, 201);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #FFF;
+  box-sizing: content-box;
+}
+
+.swiper-pagination-bullet:first-child {
+  margin: 0 !important;
+}
+
+.swiper-pagination-bullet:nth-child(2) {
+  margin: 0 0 0 16px !important;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 15px;
+  }
+}
+
 /*===============================
 contact
 ================================*/

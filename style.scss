@@ -7,10 +7,10 @@ $layout-width-inner: 1280px;
 $container-width: 1200px;
 
 //フォント
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Lato:ital,wght@1,300;1,400;1,700&family=Noto+Sans+JP:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Kiwi+Maru:wght@400;500&family=Lato:ital,wght@1,300;1,400;1,700&family=Noto+Sans+JP:wght@400;500;700&display=swap');
 
 $font-family-en: 'Caveat';
-$font-family-ja: "Noto Sans Japanese", YuGothic, "游ゴシック", sans-serif;
+$font-family-ja: "Kiwi Maru", YuGothic, "游ゴシック", sans-serif;
 $font-family-casual: "Caveat", sans-serif;
 
 
@@ -75,14 +75,49 @@ padding: 10px;
 background-color: red;
 }
 
-section{
-  padding-top: 100px;
-}
 
 .inner {
   max-width: 1140px;
   margin: 0 auto;
   padding:0px 20px;
+  
+  @include mq('tab') {
+    padding:0px 40px;
+  }
+  
+  @include mq('sp') {
+    padding:0px 20px;
+  }
+}
+
+section{
+  padding-top: 100px;
+}
+
+// sectionタイトル
+.title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+
+.title-text{
+  display: inline-block;
+  font-size: 32px;
+  position: relative;
+  font-weight: 700;
+
+  &::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 1px;
+    background-color: $color-main;
+  }
 }
 
 
@@ -288,6 +323,10 @@ top
   font-size: 100px;
   font-weight: 700;
   display: inline-block;
+  
+  @include mq('sp') {
+    font-size: 50px;
+  }
 }
 
 .top-toWorks-btn{
@@ -334,18 +373,8 @@ top
   text-align: center;
 }
 
-.title {
-  text-align: center;
-  margin-bottom: 32px;
-}
 
 
-.title-text{
-  display: inline-block;
-  font-size: 28px;
-  border-bottom: 10px dotted #E4FFD3;
-  padding-bottom: 20px;
-}
 
 
 .contact-group li {
@@ -369,6 +398,7 @@ about
 
 .about-item-name{
   font-weight: 700;
+  font-size: 32px;
 }
 
 
@@ -376,6 +406,10 @@ about
 margin-top: 20px;
 line-height: 1.5;
 font-size: 20px;
+
+@include mq('tab') {
+  font-size: 18px;
+}
 }
 
 .about-wrapper{
@@ -417,24 +451,51 @@ skill
 
 .skill-boxes{
 margin: 0 auto;
-max-width: 600px;
+max-width: 1000px;
 display: flex;
-flex-wrap: wrap;
 justify-content: space-between;
+
+@include mq('sp') {
+  display: block;
+}
 }
 
 .skill-card{
-  width: 50%;
+  flex: 1;
+  max-width: 300px;
   padding: 10px;
+  
+  
+  @include mq('sp') {
+    max-width: 320px;
+    margin: 60px auto 0px auto;
+  }
 }
 
 .skill-icon{
-font-size: 250px;
+font-size: 120px;
+height: 120px;
+text-align: center;
 }
 
 .skill-icon img{
-  width: 250px;
-  height: 250px;
+  width: 120px;
+  height: 120px;
+}
+
+.skill-sentence-title{
+margin-top: 32px;
+text-align: center;
+font-weight: 700;
+}
+
+.skill-sentence{
+margin-top: 20px;
+line-height: 1.5;
+@include mq('sp') {
+  margin-top: 16px;
+
+}
 }
 
 /* ========================
@@ -445,6 +506,7 @@ work
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+  height: auto;
 }
 
 .work-card-img{
@@ -457,6 +519,34 @@ work
   /* height: 250px; */
 }
 
+.work-card-sentence{
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+//table
+.work-table {
+  border-bottom: 1px solid $color-main;
+  width: 100%;
+  td, th{
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid $color-main;
+  }
+  th{
+    min-width: 110px;
+  }
+  td{
+    text-align: left;
+  }
+}
+
+//「使用ツール」欄
+.work-table-word{
+  word-break: break-all;
+  line-height: 1.5;
+}
+
 @media screen and (max-width: 768px) {
 	/* 575px以下に適用されるCSS */
   .about-item-contents{
@@ -465,16 +555,6 @@ work
 
   .about-item-sentence{
     margin-top: 32px;
-  }
-
-  .skill-icon{
-    font-size: 30vw;
-    text-align: center;
-    }
-
-  .skill-icon img{
-    width: 30vw;
-    height: 30vw;
   }
 
 
@@ -486,6 +566,57 @@ work
   .contact-group li a {
     display: block;
   }
+}
+
+.table-attention{
+  color: red;
+margin-top: 32px;
+}
+
+/* ========================
+swiper
+======================== */
+
+.swiper-pagination{
+  margin-top: 60px;
+}
+
+.swiper{
+  padding-bottom: 60px;
+}
+
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  margin: 0 0 0 20px !important;
+  opacity: 1;
+  background: $color-main;
+  }
+
+.swiper-pagination-bullet-active {
+  background-color: #FFF;
+  border: solid 3px $color-main;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #FFF;
+  box-sizing: content-box;
+}
+
+.swiper-pagination-bullet:first-child {
+  margin: 0 !important;
+}
+
+.swiper-pagination-bullet:nth-child(2) {
+  margin: 0 0 0 16px !important;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+bottom: 0;
+
+@include mq(sp) {
+  bottom: 15px;
+}
 }
 
 /*===============================
