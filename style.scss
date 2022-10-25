@@ -61,7 +61,7 @@ li {
 
 a{
   color: $color-text;
-
+  
   &:hover{
     text-decoration: none;
     color: $color-text;
@@ -70,9 +70,9 @@ a{
 }
 
 .btn{
-display: inline-block;
-padding: 10px;
-background-color: red;
+  display: inline-block;
+  padding: 10px;
+  background-color: red;
 }
 
 
@@ -106,7 +106,7 @@ section{
   font-size: 32px;
   position: relative;
   font-weight: 700;
-
+  
   &::after{
     content: "";
     display: block;
@@ -141,12 +141,13 @@ header {
 
 .header-menu-wrapper{
   @include mq('tab') {
-  display: none;
+    display: none;
   }
   @include mq('sp') {
-  display: none;
+    display: none;
   }
 }
+
 
 
 .header-nav-container{
@@ -502,11 +503,15 @@ line-height: 1.5;
 work
 ======================== */
 .work{
-  padding: 20px;
+  padding-top: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
   
   @include mq('sp') {
-    padding: 0px;
+    padding-left: 0px;
+    padding-right: 0px;  
   }
+
 }
 
 .work-wrapper{
@@ -564,6 +569,11 @@ work
   line-height: 1.5;
 }
 
+.table-attention{
+color: red;
+margin-top: 16px;
+}
+
 /* ========================
 swiper
 ======================== */
@@ -586,44 +596,12 @@ swiper
 
 .swiper-button-next:after{
   background: url(img/arrow-right.png) no-repeat center center / cover;
-  opacity: .8;
+  opacity: .9;
 }
 .swiper-button-prev:after{
   background: url(img/arrow-left.png) no-repeat center center / cover;
-  opacity: .8;
+  opacity: .9;
 }
-
-
-
-@media screen and (max-width: 768px) {
-	/* 575px以下に適用されるCSS */
-  .about-item-contents{
-  margin-top: 32px;
-  }
-
-  .about-item-sentence{
-    margin-top: 32px;
-  }
-
-
-  .contact-group li {
-    width: 100%;
-    padding-bottom: 20px;
-  }
-
-  .contact-group li a {
-    display: block;
-  }
-}
-
-.table-attention{
-  color: red;
-margin-top: 32px;
-}
-
-/* ========================
-swiper
-======================== */
 
 .swiper-pagination{
   margin-top: 60px;
@@ -663,284 +641,113 @@ swiper
 bottom: 0;
 
 @include mq(sp) {
-  bottom: 15px;
+  bottom: 0px;
 }
 }
 
-/*===============================
+
+/* ========================
 contact
-================================*/
-.contact {
-  background: url(../img/contact-bg.png) no-repeat center center/cover;
-}
-@media (max-width: 767px) {
-  .contact {
-    padding: 40px 16px 30px 16px;
-  }
+======================== */
+
+.contact{
+  padding: 100px 0px;
 }
 
-.contact-wrapper {
-  max-width: 960px;
-  width: 100%;
+.text-center{
+margin-top: 32px;
+
+}
+
+.contact-form{
+  max-width: 500px;
+  padding: 0px 20px;
   margin: 0 auto;
 }
 
-.contact-title-part {
-  border-radius: 12px 12px 0px 0px;
-  height: 196px;
-  text-align: center;
-  padding: 60px 0px;
-  color: #FFF;
-  background: url(../img/contact1.png) no-repeat center center/cover;
-}
-@media (max-width: 767px) {
-  .contact-title-part {
-    padding: 40px 16px 40px 16px;
-    height: 163px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1279px) {
-  .contact-title-part {
-    padding: 40px 16px 40px 16px;
-    height: 163px;
-  }
+.contact-item-title{
+  max-width: 250px;
+  width: 100%;
 }
 
-.contact-title {
-  color: #FFF;
-  padding-bottom: 16px;
-}
-@media (max-width: 767px) {
-  .contact-title {
-    padding-bottom: 5px;
-  }
-}
+.contact-wrapper{
+margin-top: 60px;
 
-.contact-subtitle {
-  text-align: center;
-}
-@media (max-width: 767px) {
-  .contact-subtitle {
-    font-size: 14px;
-    text-align: left;
-  }
-}
-
-.contact-form {
-  padding: 60px 120px 44px 120px;
-  background-color: #FFF;
-  border-radius: 0px 0px 12px 12px;
-}
-@media (max-width: 767px) {
-  .contact-form {
-    padding: 40px 12px 24px 12px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1279px) {
-  .contact-form {
-    padding: 40px 16px 24px 16px;
-  }
-}
-
-.contact-item {
-  display: flex;
-  align-items: center;
+@include mq('sp') {
   margin-top: 32px;
 }
-@media (max-width: 767px) {
-  .contact-item {
-    display: block;
-    margin-top: 30px;
-  }
 }
 
-.contact-item-title-inline {
-  font-size: 12px;
-  padding: 2px 8px;
-  color: white;
-  background-color: #FF4646;
-  margin-left: 12px;
-  line-height: 1;
-  border-radius: 2px;
+.contact-list{
+margin-top: 32px;
 }
 
-.contact-first-item {
-  margin-top: 0px;
-}
-
-.contact-item-title {
-  width: 140px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-}
-
-.contact-item-input {
-  margin-left: 60px;
-  margin-left: 47px;
-  height: 40px;
-  width: 178px;
-}
-@media (max-width: 767px) {
-  .contact-item-input {
-    margin-left: 0px;
-    width: 100%;
-  }
-}
-@media (min-width: 768px) and (max-width: 1279px) {
-  .contact-item-input {
-    margin-left: 0px;
-  }
-}
-
-.contact-type {
-  padding: 12px;
-  color: #3E3E3E;
-}
-
-.input-select {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
-.text-input {
-  flex: 1;
-  height: 32px;
+//回答欄
+.contact-item-input input,textarea{
+  margin-top: 8px;
   width: 100%;
-  align-items: center;
-}
-.text-input input {
-  width: 100%;
-  height: 100%;
-  padding-left: 12px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-@media (max-width: 767px) {
-  .text-input input {
-    padding-left: 0px;
+  padding: 5px;
+
+  &::placeholder{
+    font-family: $font-family-ja;
   }
 }
 
-.contact-message {
-  flex-direction: column;
-  align-items: flex-start;
+.contact-item-input textarea{
+height: 100px;
 }
 
-.contact-message-input {
-  margin-top: 2px;
-  margin-left: 0px;
-  width: 100%;
-  height: 200px;
+.contact-item-title{
+font-weight: 700;
+display: flex;
 }
 
-.check {
-  margin-top: 40px;
-  display: flex;
-  align-items: center;
-}
-@media (max-width: 767px) {
-  .check {
-    margin-top: 0px;
-  }
-}
-.check input {
-  width: 20px;
-  height: 20px;
-  margin: 0;
+//必須
+.contact-item-title-inline{
+    font-size: 12px;
+    padding: 2px 8px;
+    color: white;
+    background-color: #FF4646;
+    margin-left: 12px;
+    line-height: 1;
+    border-radius: 5px;
 }
 
-.check__btn {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  position: relative;
-  color: rgba(0, 0, 0, 0.7);
+//送信ボタン
+
+.contact-btn{
+  text-align: center;
+  margin-top: 32px;
 }
-.check__btn input {
+
+.contact-submit-btn{
+  width: 200px;
+  background :transparent;
+  height: 49px;
+  
+  a{
+    font-size: 18px;
+    margin: 0 auto ;
+    width: 200px;
+    display: inline-block;
+    background-color:$color-main;
+    color: #FFF;
+    
+    
+    &:hover{
+      transition: all 0.3s ease 0s;
+      color: #FFF;
+
+    }
+}
+}
+
+.end-message{
   display: none;
 }
 
-.consent-check-part {
-  position: absolute;
-  top: 0;
-  /* 上からの位置 */
-  left: 0;
-  transform: translateY(-50%);
-  height: 20px;
-  /* 幅 */
-  width: 20px;
-  /* 幅 */
-  border: solid 1px #707070;
-  /* 線 */
-}
-.consent-check-part:after {
-  content: "";
-  position: absolute;
-  border: solid #3B69FF;
-  border-width: 0 2px 2px 0;
-  left: 5px;
-  top: 1px;
-  width: 6px;
-  height: 10px;
-  transform: rotate(45deg);
-  opacity: 0;
-  /* 透明にしておく */
-}
-
-
-.check__btn input:checked + .consent-check-part {
-  background: #FFF;
-  /* チェック時の色 */
-  border-color: #707070;
-  /* チェック時の色 */
-}
-.check__btn input:checked + .consent-check-part:after {
-  opacity: 1;
-}
-
-.modal__open-wrapper {
-  font-size: 18px;
-  line-height: 18px;
-  display: flex;
-  align-items: center;
-  margin-left: 40px;
-  font-weight: 700;
-}
-
-.contact-footer-submit {
-  margin-top: 54px;
-  height: 50px;
-}
-@media (max-width: 767px) {
-  .contact-footer-submit {
-    text-align: center;
-  }
-}
-
-.submit-btn {
-  width: 173px;
-  padding: 16px 50px;
-  font-size: 18px;
-  color: #FFF;
-}
-
-.end-message {
+.false-message{
   display: none;
-  font-weight: 700;
 }
 
-.false-message {
-  display: none;
-  color: red;
-}
-
-.contact-adjust {
-  margin-top: 20px;
-}
 
