@@ -423,6 +423,15 @@ skill
 /* ========================
 work
 ======================== */
+.work {
+  padding: 20px;
+}
+@media screen and (max-width: 768px) {
+  .work {
+    padding: 0px;
+  }
+}
+
 .work-wrapper {
   max-width: 1200px;
   width: 100%;
@@ -461,9 +470,44 @@ work
   text-align: left;
 }
 
+.site-link {
+  color: rgb(6, 123, 201);
+  word-break: break-all;
+}
+.site-link:hover {
+  color: rgb(6, 123, 201);
+  opacity: 0.8;
+}
+
 .work-table-word {
   word-break: break-all;
   line-height: 1.5;
+}
+
+/* ========================
+swiper
+======================== */
+.swiper-button-prev,
+.swiper-button-next {
+  content: "";
+  width: 35px;
+  height: 35px;
+}
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  content: "";
+  width: 35px;
+  height: 35px;
+}
+
+.swiper-button-next:after {
+  background: url(img/arrow-right.png) no-repeat center center/cover;
+  opacity: 0.8;
+}
+
+.swiper-button-prev:after {
+  background: url(img/arrow-left.png) no-repeat center center/cover;
+  opacity: 0.8;
 }
 
 @media screen and (max-width: 768px) {

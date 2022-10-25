@@ -501,6 +501,13 @@ line-height: 1.5;
 /* ========================
 work
 ======================== */
+.work{
+  padding: 20px;
+  
+  @include mq('sp') {
+    padding: 0px;
+  }
+}
 
 .work-wrapper{
   max-width: 1200px;
@@ -541,11 +548,52 @@ work
   }
 }
 
+.site-link{
+  color: $color-main;
+  word-break: break-all;
+  
+  &:hover{
+    color: $color-main;
+    opacity: .8;
+  }
+}
+
 //「使用ツール」欄
 .work-table-word{
   word-break: break-all;
   line-height: 1.5;
 }
+
+/* ========================
+swiper
+======================== */
+
+.swiper-button-prev,
+.swiper-button-next {
+  
+  //デフォルトの矢印を消す
+  content: "";
+  width: 35px;
+  height: 35px;
+
+  &:after{
+    //デフォルトの矢印を消す
+    content: "";
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.swiper-button-next:after{
+  background: url(img/arrow-right.png) no-repeat center center / cover;
+  opacity: .8;
+}
+.swiper-button-prev:after{
+  background: url(img/arrow-left.png) no-repeat center center / cover;
+  opacity: .8;
+}
+
+
 
 @media screen and (max-width: 768px) {
 	/* 575px以下に適用されるCSS */
