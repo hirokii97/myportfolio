@@ -94,6 +94,9 @@ header {
   font-weight: 700;
 }
 
+.header-menu-wrapper {
+  margin-right: 24px;
+}
 @media screen and (max-width: 1103px) {
   .header-menu-wrapper {
     display: none;
@@ -128,7 +131,10 @@ header {
 }
 
 .header-menu-list {
-  margin-left: 10px;
+  margin-left: 25px;
+}
+.header-menu-list a {
+  font-size: 20px;
 }
 .header-menu-list a:hover {
   transition: all 0.5s;
@@ -310,7 +316,29 @@ about
 ======================== */
 .about img {
   width: 100%;
-  border-radius: 100%;
+  border-radius: 85%;
+  border-radius: 50% 50% 50% 70%/50% 50% 70% 60%;
+}
+
+.about-item-name-box {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .about-item-name-box {
+    margin-top: 20px;
+  }
+}
+
+.about-item-icon {
+  width: 32px;
+  height: 32px;
+  margin-left: 5px;
+  font-size: 32px;
+}
+
+.my-github {
+  display: none;
 }
 
 .about-item-name {
@@ -567,9 +595,23 @@ contact
 .contact {
   padding: 100px 0px;
 }
+@media screen and (max-width: 768px) {
+  .contact {
+    padding: 120px 0px;
+  }
+}
 
 .text-center {
   margin-top: 32px;
+}
+@media screen and (max-width: 768px) {
+  .text-center {
+    font-size: 14px;
+  }
+}
+
+.contact-form-box {
+  margin-top: 16px;
 }
 
 .contact-form {

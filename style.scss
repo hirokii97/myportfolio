@@ -140,6 +140,7 @@ header {
 }
 
 .header-menu-wrapper{
+  margin-right: 24px;
   @include mq('tab') {
     display: none;
   }
@@ -173,9 +174,10 @@ header {
 }
 
 .header-menu-list{
-  margin-left: 10px;
+  margin-left: 25px;
   
   & a{
+    font-size: 20px;
     &:hover{
       transition: all 0.5s;
       color: #FFF;
@@ -394,13 +396,35 @@ about
 
 .about img {
   width: 100%;
-  border-radius: 100%;
+  border-radius: 85%;
+  border-radius: 50% 50% 50% 70%/50% 50% 70% 60%;
+}
+
+.about-item-name-box{
+  display: flex;
+  align-items: center;
+  @include mq('sp') {
+    margin-top: 20px;
+  }
+}
+
+
+.about-item-icon{
+width: 32px;
+height: 32px;
+margin-left: 5px;
+font-size: 32px;
+}
+
+.my-github{
+  display: none;
 }
 
 .about-item-name{
   font-weight: 700;
   font-size: 32px;
 }
+
 
 
 .about-item-sentence{
@@ -652,11 +676,22 @@ contact
 
 .contact{
   padding: 100px 0px;
+  
+  @include mq('sp') {
+    padding: 120px 0px;
+  }
 }
 
 .text-center{
 margin-top: 32px;
 
+@include mq('sp') {
+  font-size: 14px;
+}
+}
+
+.contact-form-box{
+margin-top: 16px;
 }
 
 .contact-form{
