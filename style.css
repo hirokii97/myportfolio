@@ -108,7 +108,7 @@ header {
   }
 }
 
-.header-nav-container {
+.header-nav-container, .footer-nav-container {
   color: #3E3E3E;
   padding: 10px 20px;
   height: 60px;
@@ -701,4 +701,44 @@ contact
 
 .false-message {
   display: none;
+}
+
+/* ========================
+固定ボタン
+======================== */
+.fixed-button {
+  display: block;
+  position: fixed;
+  right: 20px;
+  bottom: 35px;
+}
+@media screen and (min-width: 1104px) {
+  .fixed-button {
+    display: none;
+  }
+}
+
+.fixed-button-contact {
+  margin-top: 24px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 0px;
+}
+
+/* ========================
+footer
+======================== */
+footer {
+  text-align: right;
+}
+
+.footer-title {
+  font-size: 32px;
+}
+@media screen and (max-width: 768px) {
+  .footer-title {
+    font-size: 24px;
+  }
 }

@@ -151,11 +151,10 @@ header {
 
 
 
-.header-nav-container{
+.header-nav-container,.footer-nav-container{
   color: $color-text;
   padding: 10px 20px;
   height: 60px;
-  
   display: flex;
   align-items: center;
 }
@@ -785,4 +784,42 @@ display: flex;
   display: none;
 }
 
+/* ========================
+固定ボタン
+======================== */
 
+.fixed-button{
+  display: block;
+  position: fixed;
+  right: 20px;
+  bottom: 35px;
+
+  @include mq('pc') {
+    display: none;
+  }
+}
+
+.fixed-button-contact{
+  margin-top: 24px;
+}
+
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 0px;
+  }
+
+  /* ========================
+  footer
+  ======================== */
+footer{
+text-align: right;
+}
+
+.footer-title{
+  font-size: 32px;
+  
+  @include mq('sp') {
+    font-size: 24px;
+  }
+}
