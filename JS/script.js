@@ -60,3 +60,6 @@ $(function() {
       });
       event.preventDefault();
     });
+
+//wow
+new WOW().init();

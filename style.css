@@ -338,7 +338,7 @@ about
 }
 
 .my-github {
-  display: none;
+  /* display: none; */
 }
 
 .about-item-name {
@@ -478,6 +478,12 @@ work
 .work-card-img img {
   width: 100%;
   /* height: 250px; */
+}
+
+.work-title{
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
 .work-card-sentence {
