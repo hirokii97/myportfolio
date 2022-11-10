@@ -338,7 +338,7 @@ about
 }
 
 .my-github {
-  /* display: none; */
+  display: none;
 }
 
 .about-item-name {
@@ -478,12 +478,6 @@ work
 .work-card-img img {
   width: 100%;
   /* height: 250px; */
-}
-
-.work-title{
-display: flex;
-align-items: center;
-justify-content: center;
 }
 
 .work-card-sentence {
@@ -712,6 +706,58 @@ contact
 /* ========================
 固定ボタン
 ======================== */
+.yureru-updown {
+  -webkit-animation: yureru-updown 2s infinite;
+          animation: yureru-updown 2s infinite;
+}
+
+@-webkit-keyframes yureru-updown {
+  0% {
+    transform: translate(0px, 2px);
+  }
+  5% {
+    transform: translate(0px, -2px);
+  }
+  10% {
+    transform: translate(0px, 2px);
+  }
+  15% {
+    transform: translate(0px, -2px);
+  }
+  20% {
+    transform: translate(0px, 2px);
+  }
+  25% {
+    transform: translate(0px, -2px);
+  }
+  30% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes yureru-updown {
+  0% {
+    transform: translate(0px, 2px);
+  }
+  5% {
+    transform: translate(0px, -2px);
+  }
+  10% {
+    transform: translate(0px, 2px);
+  }
+  15% {
+    transform: translate(0px, -2px);
+  }
+  20% {
+    transform: translate(0px, 2px);
+  }
+  25% {
+    transform: translate(0px, -2px);
+  }
+  30% {
+    transform: translate(0px, 0px);
+  }
+}
 .fixed-button {
   display: block;
   position: fixed;
