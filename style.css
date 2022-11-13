@@ -337,10 +337,6 @@ about
   font-size: 32px;
 }
 
-.my-github {
-  display: none;
-}
-
 .about-item-name {
   font-weight: 700;
   font-size: 32px;
@@ -473,6 +469,19 @@ work
 .work-card-img {
   width: 100%;
   /* height: 250px; */
+}
+
+.work-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding-bottom: 5px;
+}
+
+.title-name{
+  line-height: 32px;
+  font-weight: 700;
 }
 
 .work-card-img img {
