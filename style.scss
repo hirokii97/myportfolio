@@ -559,6 +559,19 @@ work
   margin: 0 auto;
 }
 
+.work-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding-bottom: 5px;
+}
+
+.title-name{
+  line-height: 32px;
+  font-weight: 700;
+}
+
 //table
 .work-table {
   border-bottom: 1px solid $color-main;
